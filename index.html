@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SOUNDWAAVE | Music Streaming</title>
+    <title>SOUNDWAAVE |MuiscStreaming</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
     <style>
@@ -33,7 +33,7 @@
         .container {
             display: grid;
             grid-template-columns: 240px 1fr;
-            grid-template-rows: 1fr auto;
+            grid-template-rows: 1fr 90px;
             height: 100vh;
         }
 
@@ -152,7 +152,6 @@
             margin-right: 16px;
             cursor: pointer;
             transition: all 0.3s;
-            font-size: 16px;
         }
 
         .nav-buttons button:hover {
@@ -289,6 +288,10 @@
             margin-top: 8px;
         }
 
+        .recently-played {
+            margin-bottom: 40px;
+        }
+
         /* Player Styles */
         .player {
             grid-column: 1 / 3;
@@ -359,7 +362,6 @@
             margin: 0 12px;
             cursor: pointer;
             transition: all 0.3s;
-            padding: 8px;
         }
 
         .control-buttons button:hover {
@@ -369,8 +371,8 @@
         .control-buttons .play-pause {
             background-color: var(--light-text);
             color: #000;
-            width: 40px;
-            height: 40px;
+            width: 32px;
+            height: 32px;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -389,9 +391,9 @@
 
         .progress-bar {
             flex-grow: 1;
-            height: 6px;
+            height: 4px;
             background-color: rgba(255, 255, 255, 0.3);
-            border-radius: 3px;
+            border-radius: 2px;
             margin: 0 8px;
             cursor: pointer;
         }
@@ -400,7 +402,7 @@
             height: 100%;
             width: 30%;
             background-color: var(--gray-text);
-            border-radius: 3px;
+            border-radius: 2px;
             position: relative;
         }
 
@@ -456,9 +458,9 @@
 
         .volume-bar {
             width: 100px;
-            height: 6px;
+            height: 4px;
             background-color: rgba(255, 255, 255, 0.3);
-            border-radius: 3px;
+            border-radius: 2px;
             margin-left: 8px;
             cursor: pointer;
         }
@@ -467,7 +469,7 @@
             height: 100%;
             width: 70%;
             background-color: var(--gray-text);
-            border-radius: 3px;
+            border-radius: 2px;
             position: relative;
         }
 
@@ -498,11 +500,11 @@
 
         @media (max-width: 992px) {
             .container {
-                grid-template-columns: 70px 1fr;
+                grid-template-columns: 80px 1fr;
             }
             
             .sidebar {
-                padding: 16px 8px;
+                padding: 24px 12px;
             }
             
             .logo span, nav a span, .playlists h3, .playlists a {
@@ -511,16 +513,12 @@
             
             nav a i, .logo i {
                 margin-right: 0;
-                font-size: 22px;
+                font-size: 24px;
             }
             
             nav li {
                 text-align: center;
-                margin-bottom: 20px;
-            }
-            
-            .main-content {
-                padding: 0 16px;
+                margin-bottom: 24px;
             }
         }
 
@@ -528,6 +526,20 @@
             .cards-container {
                 grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
                 gap: 16px;
+            }
+            
+            .player-song-info, .player-extra {
+                width: auto;
+            }
+            
+            .player-controls {
+                width: 60%;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .main-content {
+                padding: 0 16px;
             }
             
             .welcome-message h1 {
@@ -538,196 +550,29 @@
                 font-size: 20px;
             }
             
-            .player-song-info, .player-extra {
-                width: auto;
-            }
-            
-            .player-controls {
-                width: 100%;
-            }
-            
-            .control-buttons button {
-                font-size: 18px;
-                margin: 0 10px;
-                padding: 10px;
-            }
-            
-            .control-buttons .play-pause {
-                width: 48px;
-                height: 48px;
-            }
-            
-            .progress-bar, .volume-bar {
-                height: 8px;
-            }
-            
-            .progress::after, .volume-level::after {
-                width: 16px;
-                height: 16px;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .container {
-                grid-template-columns: 1fr;
-                grid-template-rows: auto 1fr auto;
-            }
-            
-            .sidebar {
-                position: fixed;
-                bottom: 90px;
-                left: 0;
-                width: 100%;
-                height: 60px;
-                padding: 0;
-                flex-direction: row;
-                justify-content: space-around;
-                align-items: center;
-                z-index: 20;
-                border-top: 1px solid rgba(255, 255, 255, 0.1);
-            }
-            
-            .logo {
-                display: none;
-            }
-            
-            nav ul {
-                display: flex;
-                justify-content: space-around;
-                width: 100%;
-                margin: 0;
-            }
-            
-            nav li {
-                margin: 0;
-            }
-            
-            nav a i {
-                font-size: 20px;
-            }
-            
-            .playlists {
-                display: none;
-            }
-            
-            .main-content {
-                padding: 0 12px;
-                grid-column: 1 / 2;
-            }
-            
-            .welcome-message h1 {
-                font-size: 20px;
-            }
-            
-            .section-title {
-                font-size: 18px;
-            }
-            
             .cards-container {
                 grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-                gap: 12px;
-            }
-            
-            .card {
-                padding: 12px;
-            }
-            
-            .card-title {
-                font-size: 14px;
-            }
-            
-            .card-artist {
-                font-size: 12px;
-            }
-            
-            .card-play-btn {
-                width: 36px;
-                height: 36px;
             }
             
             .player {
                 flex-direction: column;
-                padding: 12px;
+                padding: 16px;
                 height: auto;
-                position: fixed;
-                bottom: 0;
-                width: 100%;
             }
             
             .player-song-info {
                 width: 100%;
-                margin-bottom: 12px;
-                padding: 8px;
-            }
-            
-            .player-song-info img {
-                width: 48px;
-                height: 48px;
-                margin-right: 12px;
-            }
-            
-            .song-meta h4 {
-                font-size: 13px;
-            }
-            
-            .song-meta p {
-                font-size: 11px;
+                margin-bottom: 16px;
             }
             
             .player-controls {
                 width: 100%;
-                margin-bottom: 12px;
-            }
-            
-            .control-buttons {
-                justify-content: center;
-            }
-            
-            .progress-container {
-                padding: 0 8px;
+                margin-bottom: 16px;
             }
             
             .player-extra {
                 width: 100%;
                 justify-content: center;
-                padding: 8px;
-            }
-            
-            .volume-control {
-                margin-left: 12px;
-            }
-            
-            .volume-bar {
-                width: 80px;
-            }
-        }
-
-        @media (max-width: 360px) {
-            .cards-container {
-                grid-template-columns: 1fr;
-            }
-            
-            .card {
-                padding: 10px;
-            }
-            
-            .card-title {
-                font-size: 13px;
-            }
-            
-            .card-artist {
-                font-size: 11px;
-            }
-            
-            .control-buttons button {
-                font-size: 16px;
-                margin: 0 8px;
-                padding: 8px;
-            }
-            
-            .control-buttons .play-pause {
-                width: 40px;
-                height: 40px;
             }
         }
     </style>
@@ -752,7 +597,7 @@
                 <ul>
                     <li><a href="dev.html">DevotionalSongs</a></li>
                     <li><a href="chill.html">Chill Vibes</a></li>
-                    <li><a href="trip.html">Love Hits</a></li>
+                    <li><a href="trip.html">love hits</a></li>
                 </ul>
             </div>
         </div>
@@ -771,7 +616,7 @@
             </div>
 
             <div class="made-for-you" id="mood">
-                <h2 class="section-title">Made for You</h2>
+                <h2 class="section-title">Made for you</h2>
                 <div class="cards-container">
                     <!-- Song cards will be dynamically inserted here -->
                 </div>
@@ -842,7 +687,7 @@
                         artist: "NTR, Ram Charan",
                         album: "RRR",
                         cover: "https://upload.wikimedia.org/wikipedia/en/2/2e/Naatu_Naatu.jpg",
-                        audio: "Nattu Nattu.mp3",
+                        audio: "C:/Users/Mohan Addanki/Downloads/Nattu Nattu.mp3",
                         duration: ""
                     },
                     {
@@ -851,7 +696,7 @@
                         artist: "Ramana Gogula, Madhu Priya",
                         album: "Sankranthiki Vasthunam",
                         cover: "https://naasongs.com.co/wp-content/uploads/2025/01/Sankranthiki-Vasthunnam-Songs-Download-2025-Venkatesh-Meenakshi-Chaudhary-Aishwarya-Rajesh-1.jpg",
-                        audio: "Godari Gattu.mp3",
+                        audio: "C:/Users/Mohan Addanki/Downloads/Godari Gattu.mp3",
                         duration: ""
                     },
                     {
@@ -860,7 +705,7 @@
                         artist: "Allu Arjun",
                         album: "Ala Vaikuntapuramlo",
                         cover: "https://i.scdn.co/image/ab67616d0000b273ec8e1f5da18069b24fb43694",
-                        audio: "Ramuloo Ramula - SenSongsMp3.Co.mp3",
+                        audio: "C:/Users/Mohan Addanki/Downloads/Ramuloo Ramula - SenSongsMp3.Co.mp3",
                         duration: ""
                     },
                     {
@@ -869,7 +714,7 @@
                         artist: "NTR",
                         album: "",
                         cover: "https://www.naasongs.to/wp-content/uploads/2024/01/Devara-2024-All-Hail-The-Tiger.jpg",
-                        audio: "Fear.mp3",
+                        audio: "C:/Users/Mohan Addanki/Downloads/Fear.mp3",
                         duration: ""
                     },
                     {
@@ -878,7 +723,7 @@
                         artist: "Prabhas",
                         album: "",
                         cover: "https://naasongs.com.co/wp-content/uploads/2018/06/Billa-2009-jpeg-300x300.jpg",
-                        audio: "My Name is Billa-SenSongsMp3.Co.mp3",
+                        audio: "C:/Users/Mohan Addanki/Downloads/My Name is Billa-SenSongsMp3.Co.mp3",
                         duration: ""
                     },
                     {
@@ -887,7 +732,7 @@
                         artist: "Allu Arjun, Rashmika",
                         album: "Pushpa",
                         cover: "https://c.saavncdn.com/366/Pushpa-2-The-Rule-Telugu-Telugu-2024-20241205211012-500x500.jpg",
-                        audio: "Peelings.mp3",
+                        audio: "C:/Users/Mohan Addanki/Downloads/Peelings.mp3",
                         duration: ""
                     }
                 ],
@@ -898,7 +743,7 @@
                         artist: "Sid Sriram",
                         album: "Hit 3",
                         cover: "https://a10.gaanacdn.com/gn_img/albums/XzVWRLKdqR/VWRJBBELWd/size_m.jpg",
-                        audio: "Prema Velluva.mp3",
+                        audio: "C:/Users/Mohan Addanki/Downloads/Prema Velluva.mp3",
                         duration: ""
                     },
                     {
@@ -907,7 +752,7 @@
                         artist: "Shilpa Rao",
                         album: "Devara 1",
                         cover: "https://c.saavncdn.com/411/Chuttamalle-From-Devara-Part-1-Telugu-2024-20240805181008-500x500.jpg",
-                        audio: "Chuttamalle.mp3",
+                        audio: "C:/Users/Mohan Addanki/Downloads/Chuttamalle.mp3",
                         duration: ""
                     },
                     {
@@ -916,7 +761,7 @@
                         artist: "Vijay Prakash",
                         album: "Orange",
                         cover: "https://c.saavncdn.com/105/Orange-Telugu-2006-20210624180302-500x500.jpg",
-                        audio: "4-Hello Rammante-SenSongsMp3.Co.mp3",
+                        audio: "C:/Users/Mohan Addanki/Downloads/4-Hello Rammante-SenSongsMp3.Co.mp3",
                         duration: ""
                     },
                     {
@@ -925,7 +770,7 @@
                         artist: "Mani Sharma, Ranjith",
                         album: "Ek Niranjan",
                         cover: "https://c.saavncdn.com/702/Ek-Niranjan-2009-500x500.jpg",
-                        audio: "Ek Niranjan-SenSongsMp3.Co.mp3",
+                        audio: "C:/Users/Mohan Addanki/Downloads/Ek Niranjan-SenSongsMp3.Co.mp3",
                         duration: ""
                     },
                     {
@@ -934,7 +779,7 @@
                         artist: "N.C. Karunya",
                         album: "Chirutha",
                         cover: "https://naasongs.com.co/wp-content/uploads/2018/06/chirutha-jpeg-300x300.jpg",
-                        audio: "Endhuko Pichi Pichi-SenSongsMp3.Co.mp3",
+                        audio: "C:/Users/Mohan Addanki/Downloads/Endhuko Pichi Pichi-SenSongsMp3.Co.mp3",
                         duration: ""
                     },
                     {
@@ -943,7 +788,7 @@
                         artist: "Amran Malik",
                         album: "Ala Vaikuntapuramlo",
                         cover: "https://i.scdn.co/image/ab67616d0000b27363118748c712b6ac32c0feec",
-                        audio: "Buttabomma - SenSongsMp3.Co.mp3",
+                        audio: "C:/Users/Mohan Addanki/Downloads/Buttabomma - SenSongsMp3.Co.mp3",
                         duration: ""
                     }
                 ],
