@@ -773,521 +773,521 @@ header {
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Music library - combined and shuffled
-            const musicLibrary = [
-                {
-                    id: 1,
-                    title: "KISSIK",
-                    artist: "Sublahshini, Devi Sri Prasad",
-                    album: "PUSHPA 2-THE RULE",
-                    cover: "https://c.saavncdn.com/587/Kissik-From-Pushpa-2-The-Rule-Telugu-Telugu-2024-20241124192109-500x500.jpg",
-                    audio: "C:/Users/Mohan Addanki/Downloads/Kissik.mp3",
-                    duration: "4:02",
-                },
-                {
-                    id: 2,
-                    title: "IT'S TIME TO PARTY",
-                    artist: "Devi Sri Prasad, David Simon, Malgadi Subha",
-                    album: "ATHARINTIKI DAREDHI",
-                    cover: "https://c.saavncdn.com/464/Attarrintiki-Daaredi-Telugu-2013-500x500.jpg",
-                    audio: "C:/Users/Mohan Addanki/Downloads/Time To Party -SenSongsMp3.Co.mp3",
-                    duration: "4:49",
-                },
-                {
-                    id: 3,
-                    title: "Ee Raathale",
-                    artist: "Yuvan Shankar Raja, Harini Ivaturi",
-                    album: "Radhe Shyam",
-                    cover: "https://upload.wikimedia.org/wikipedia/en/d/d6/Radhe_Shyam_Album.jpg",
-                    audio: "C:/Users/Mohan Addanki/Downloads/Ee Raathale.mp3",
-                    duration: "3:54"
-                },
-                {
-                    id: 4,
-                    title: "Nagumomu Thaarale",
-                    artist: "Sid Sriram",
-                    album: "Radhe Shyam",
-                    cover: "https://upload.wikimedia.org/wikipedia/en/d/d6/Radhe_Shyam_Album.jpg",
-                    audio: "C:/Users/Mohan Addanki/Downloads/Nagumomu Thaarale.mp3",
-                    duration: "4:31"
-                },
-                {
-                    id: 5,
-                    title: "Sanchari",
-                    artist: "Anirudh Ravichander",
-                    album: "Radhe Shyam",
-                    cover: "https://upload.wikimedia.org/wikipedia/en/d/d6/Radhe_Shyam_Album.jpg",
-                    audio: "C:/Users/Mohan Addanki/Downloads/Sanchari.mp3",
-                    duration: "4:35"
-                },
-                {
-                    id: 6,
-                    title: "Ninnele",
-                    artist: "Anurag Kulkarni, Shreya Ghoshal",
-                    album: "Radhe Shyam",
-                    cover: "https://upload.wikimedia.org/wikipedia/en/d/d6/Radhe_Shyam_Album.jpg",
-                    audio: "C:/Users/Mohan Addanki/Downloads/Ninnele.mp3",
-                    duration: "4:07"
-                },
-                {
-                    id: 7,
-                    title: "Chuttamalle",
-                    artist: "Shilpa Rao",
-                    album: "Devara: Part 1",
-                    cover: "https://www.naasongs.to/wp-content/uploads/2024/01/Devara-2024-All-Hail-The-Tiger.jpg",
-                    audio: "C:/Users/Mohan Addanki/Downloads/Chuttamalle.mp3",
-                    duration: "4:12"
-                },
-                {
-                    id: 8,
-                    title: "Fear Song",
-                    artist: "Anirudh Ravichander",
-                    album: "Devara: Part 1",
-                    cover: "https://www.naasongs.to/wp-content/uploads/2024/01/Devara-2024-All-Hail-The-Tiger.jpg",
-                    audio: "C:/Users/Mohan Addanki/Downloads/Fear.mp3",
-                    duration: "3:58"
-                },
-                {
-                    id: 9,
-                    title: "Ayudha Puja",
-                    artist: "Karthik, Shashank",
-                    album: "Devara: Part 1",
-                    cover: "https://www.naasongs.to/wp-content/uploads/2024/01/Devara-2024-All-Hail-The-Tiger.jpg",
-                    audio: "C:/Users/Mohan Addanki/Downloads/Ayudha Pooja.mp3",
-                    duration: "4:05"
-                },
-                {
-                    id: 10,
-                    title: "Daavudi",
-                    artist: "Nakash Aziz, Ramya Behara",
-                    album: "Devara: Part 1",
-                    cover: "https://www.naasongs.to/wp-content/uploads/2024/01/Devara-2024-All-Hail-The-Tiger.jpg",
-                    audio: "C:/Users/Mohan Addanki/Downloads/Daavudi.mp3",
-                    duration: "4:20"
-                },
-                {
-                    id: 11,
-                    title: "Pushpa Pushpa",
-                    artist: "Nakash Aziz, Deepak Blue",
-                    album: "Pushpa 2: The Rule",
-                    cover: "https://c.saavncdn.com/366/Pushpa-2-The-Rule-Telugu-Telugu-2024-20241205211012-500x500.jpg",
-                    audio: "C:/Users/Mohan Addanki/Downloads/Pushpa Pushpa.mp3",
-                    duration: "4:16"
-                },
-                {
-                    id: 12,
-                    title: "Sooseki",
-                    artist: "Shreya Ghoshal",
-                    album: "Pushpa 2: The Rule",
-                    cover: "https://c.saavncdn.com/366/Pushpa-2-The-Rule-Telugu-Telugu-2024-20241205211012-500x500.jpg",
-                    audio: "C:/Users/Mohan Addanki/Downloads/Sooseki.mp3",
-                    duration: "4:19"
-                },
-                {
-                    id: 13,
-                    title: "Peelings",
-                    artist: "Shankarr Babu Kandukoori, Laxmi Dasa",
-                    album: "Pushpa 2: The Rule",
-                    cover: "https://c.saavncdn.com/366/Pushpa-2-The-Rule-Telugu-Telugu-2024-20241205211012-500x500.jpg",
-                    audio: "C:/Users/Mohan Addanki/Downloads/Peelings.mp3",
-                    duration: "4:11"
-                },
-                {
-                    id: 14,
-                    title: "Gango Renuka Thalli",
-                    artist: "Mahalingam",
-                    album: "Pushpa 2: The Rule",
-                    cover: "https://c.saavncdn.com/366/Pushpa-2-The-Rule-Telugu-Telugu-2024-20241205211012-500x500.jpg",
-                    audio: "C:/Users/Mohan Addanki/Downloads/Gango Renuka Thalli.mp3",
-                    duration: "3:25"
-                },
-                {
-                    id: 15,
-                    title: "Dammunte paatukora",
-                    artist: "Allu Arjun",
-                    album: "Pushpa 2: The Rule",
-                    cover: "https://c.saavncdn.com/366/Pushpa-2-The-Rule-Telugu-Telugu-2024-20241205211012-500x500.jpg",
-                    audio: "C:/Users/Mohan Addanki/Downloads/Dammunte Pattukora.mp3",
-                    duration: "3:30"
-                },
-                {
-                    id: 16,
-                    title: "Naatu Naatu",
-                    artist: "Rahul Sipligunj, Kaala Bhairava",
-                    album: "RRR",
-                    cover: "https://upload.wikimedia.org/wikipedia/en/d/d7/RRR_Poster.jpg",
-                    audio: "C:Users/Mohan Addanki/Downloads/Nattu Nattu.mp3",
-                    duration: "3:34",
-                },
-                {
-                    id: 17,
-                    title: "Dosti",
-                    artist: "Hemachandra, MM Keeravaani",
-                    album: "RRR",
-                    cover: "https://upload.wikimedia.org/wikipedia/en/d/d7/RRR_Poster.jpg",
-                    audio: "C:/Users/Mohan Addanki/Downloads/Dosti.mp3",
-                    duration: "4:21",
-                },
-                {
-                    id: 18,
-                    title: "Komuram Bheemudo",
-                    artist: "Kaala Bhairava",
-                    album: "RRR",
-                    cover: "https://upload.wikimedia.org/wikipedia/en/d/d7/RRR_Poster.jpg",
-                    audio: "C:/Users/Mohan Addanki/Downloads/Komuram Bheemudo.mp3",
-                    duration: "3:27",
-                },
-                {
-                    id: 19,
-                    title: "Ramam Raghavam",
-                    artist: "Vijay Prakash, M keervaani ",
-                    album: "RRR",
-                    cover: "https://upload.wikimedia.org/wikipedia/en/d/d7/RRR_Poster.jpg",
-                    audio: "C:/Users/Mohan Addanki/Downloads/Raamam Raaghavam.mp3",
-                    duration: "3:52",
-                },
-                {
-                    id: 20,
-                    title: "Etthara Jenda",
-                    artist: "Ramya Behara, Deepak Blue",
-                    album: "RRR",
-                    cover: "https://upload.wikimedia.org/wikipedia/en/d/d7/RRR_Poster.jpg",
-                    audio: "C:/Users/Mohan Addanki/Downloads/Etthara Jenda.mp3",
-                    duration: "3:04",
-                },
-                {
-                    id: 21,
-                    title: "Nenu Nuvvantu",
-                    artist: "Naresh Iyer, Nadeesh",
-                    album: "Orange",
-                    cover: "https://c.saavncdn.com/105/Orange-Telugu-2006-20210624180302-500x500.jpg",
-                    audio: "C:/Users/Mohan Addanki/Downloads/3-Nenu Nuvvantu-SenSongsMp3.Co.mp3",
-                    duration: "3:23"
-                },
-                {
-                    id: 22,
-                    title: "Godari Gattu",
-                    artist: "Ramana Gogula, Madhu Priya",
-                    album: "Sankranthiki Vasthunam",
-                    cover: "https://naasongs.com.co/wp-content/uploads/2025/01/Sankranthiki-Vasthunnam-Songs-Download-2025-Venkatesh-Meenakshi-Chaudhary-Aishwarya-Rajesh-1.jpg",
-                    audio: "C:/Users/Mohan Addanki/Downloads/Godari Gattu.mp3",
-                    duration: "3:45"
-                },
-                {
-                    id: 23,
-                    title: "Ramuloo Ramulaa",
-                    artist: "Allu Arjun",
-                    album: "Ala Vaikuntapuramlo",
-                    cover: "https://i.scdn.co/image/ab67616d0000b273ec8e1f5da18069b24fb43694",
-                    audio: "C:/Users/Mohan Addanki/Downloads/Ramuloo Ramula - SenSongsMp3.Co.mp3",
-                    duration: "4:05"
-                },
-                {
-                    id: 24,
-                    title: "My is Billa",
-                    artist: "Prabhas",
-                    album: "Billa",
-                    cover: "https://naasongs.com.co/wp-content/uploads/2018/06/Billa-2009-jpeg-300x300.jpg",
-                    audio: "C:/Users/Mohan Addanki/Downloads/My Name is Billa-SenSongsMp3.Co.mp3",
-                    duration: "3:20"
-                },
-                {
-                    id: 25,
-                    title: "Prema Velluva",
-                    artist: "Sid Sriram",
-                    album: "Hit 3",
-                    cover: "https://a10.gaanacdn.com/gn_img/albums/XzVWRLKdqR/VWRJBBELWd/size_m.jpg",
-                    audio: "C:/Users/Mohan Addanki/Downloads/Prema Velluva.mp3",
-                    duration: "4:15"
-                },
-                {
-                    id: 26,
-                    title: "Hello Rammante",
-                    artist: "Vijay Prakash",
-                    album: "Orange",
-                    cover: "https://c.saavncdn.com/105/Orange-Telugu-2006-20210624180302-500x500.jpg",
-                    audio: "C:/Users/Mohan Addanki/Downloads/4-Hello Rammante-SenSongsMp3.Co.mp3",
-                    duration: "2:54"
-                },
-                {
-                    id: 27,
-                    title: "Ek Niranjan",
-                    artist: "Mani Sharma, Ranjith",
-                    album: "Ek Niranjan",
-                    cover: "https://c.saavncdn.com/702/Ek-Niranjan-2009-500x500.jpg",
-                    audio: "C:/Users/Mohan Addanki/Downloads/Ek Niranjan-SenSongsMp3.Co.mp3",
-                    duration: "2:21"
-                },
-                {
-                    id: 28,
-                    title: "Endhoko Pichi Pichiga",
-                    artist: "N.C. Karunya",
-                    album: "Chirutha",
-                    cover: "https://naasongs.com.co/wp-content/uploads/2018/06/chirutha-jpeg-300x300.jpg",
-                    audio: "C:/Users/Mohan Addanki/Downloads/Endhuko Pichi Pichi-SenSongsMp3.Co.mp3",
-                    duration: "3:50"
-                },
-                {
-                    id: 29,
-                    title: "Butta Bomma",
-                    artist: "Amran Malik",
-                    album: "Ala Vaikuntapuramlo",
-                    cover: "https://i.scdn.co/image/ab67616d0000b27363118748c712b6ac32c0feec",
-                    audio: "C:/Users/Mohan Addanki/Downloads/Buttabomma - SenSongsMp3.Co.mp3",
-                    duration: "3:03"
-                },
-                {
-                    id: 30,
-                    title: "Naalona Pongenu",
-                    artist: "Haricharan",
-                    album: "Surya S/o Krishanan",
-                    cover: "https://c.saavncdn.com/182/Surya-S-o-Krishnan-Telugu-2008-20190822124405-500x500.jpg",
-                    audio: "C:/Users/Mohan Addanki/Downloads/02 - Naalona Pongenu - SenSongsMp3.co.mp3",
-                    duration: "3:35"
-                }
-            ];
+    // Music library - combined and shuffled
+    const musicLibrary = [
+        {
+            id: 1,
+            title: "KISSIK",
+            artist: "Sublahshini, Devi Sri Prasad",
+            album: "PUSHPA 2-THE RULE",
+            cover: "https://c.saavncdn.com/587/Kissik-From-Pushpa-2-The-Rule-Telugu-Telugu-2024-20241124192109-500x500.jpg",
+            audio: "Kissik.mp3",
+            duration: "4:02",
+        },
+        {
+            id: 2,
+            title: "IT'S TIME TO PARTY",
+            artist: "Devi Sri Prasad, David Simon, Malgadi Subha",
+            album: "ATHARINTIKI DAREDHI",
+            cover: "https://c.saavncdn.com/464/Attarrintiki-Daaredi-Telugu-2013-500x500.jpg",
+            audio: "Time To Party -SenSongsMp3.Co.mp3",
+            duration: "4:49",
+        },
+        {
+            id: 3,
+            title: "Ee Raathale",
+            artist: "Yuvan Shankar Raja, Harini Ivaturi",
+            album: "Radhe Shyam",
+            cover: "https://upload.wikimedia.org/wikipedia/en/d/d6/Radhe_Shyam_Album.jpg",
+            audio: "Ee Raathale.mp3",
+            duration: "3:54"
+        },
+        {
+            id: 4,
+            title: "Nagumomu Thaarale",
+            artist: "Sid Sriram",
+            album: "Radhe Shyam",
+            cover: "https://upload.wikimedia.org/wikipedia/en/d/d6/Radhe_Shyam_Album.jpg",
+            audio: "Nagumomu Thaarale.mp3",
+            duration: "4:31"
+        },
+        {
+            id: 5,
+            title: "Sanchari",
+            artist: "Anirudh Ravichander",
+            album: "Radhe Shyam",
+            cover: "https://upload.wikimedia.org/wikipedia/en/d/d6/Radhe_Shyam_Album.jpg",
+            audio: "Sanchari.mp3",
+            duration: "4:35"
+        },
+        {
+            id: 6,
+            title: "Ninnele",
+            artist: "Anurag Kulkarni, Shreya Ghoshal",
+            album: "Radhe Shyam",
+            cover: "https://upload.wikimedia.org/wikipedia/en/d/d6/Radhe_Shyam_Album.jpg",
+            audio: "Ninnele.mp3",
+            duration: "4:07"
+        },
+        {
+            id: 7,
+            title: "Chuttamalle",
+            artist: "Shilpa Rao",
+            album: "Devara: Part 1",
+            cover: "https://www.naasongs.to/wp-content/uploads/2024/01/Devara-2024-All-Hail-The-Tiger.jpg",
+            audio: "Chuttamalle.mp3",
+            duration: "4:12"
+        },
+        {
+            id: 8,
+            title: "Fear Song",
+            artist: "Anirudh Ravichander",
+            album: "Devara: Part 1",
+            cover: "https://www.naasongs.to/wp-content/uploads/2024/01/Devara-2024-All-Hail-The-Tiger.jpg",
+            audio: "Fear.mp3",
+            duration: "3:58"
+        },
+        {
+            id: 9,
+            title: "Ayudha Puja",
+            artist: "Karthik, Shashank",
+            album: "Devara: Part 1",
+            cover: "https://www.naasongs.to/wp-content/uploads/2024/01/Devara-2024-All-Hail-The-Tiger.jpg",
+            audio: "Ayudha Pooja.mp3",
+            duration: "4:05"
+        },
+        {
+            id: 10,
+            title: "Daavudi",
+            artist: "Nakash Aziz, Ramya Behara",
+            album: "Devara: Part 1",
+            cover: "https://www.naasongs.to/wp-content/uploads/2024/01/Devara-2024-All-Hail-The-Tiger.jpg",
+            audio: "Daavudi.mp3",
+            duration: "4:20"
+        },
+        {
+            id: 11,
+            title: "Pushpa Pushpa",
+            artist: "Nakash Aziz, Deepak Blue",
+            album: "Pushpa 2: The Rule",
+            cover: "https://c.saavncdn.com/366/Pushpa-2-The-Rule-Telugu-Telugu-2024-20241205211012-500x500.jpg",
+            audio: "Pushpa Pushpa.mp3",
+            duration: "4:16"
+        },
+        {
+            id: 12,
+            title: "Sooseki",
+            artist: "Shreya Ghoshal",
+            album: "Pushpa 2: The Rule",
+            cover: "https://c.saavncdn.com/366/Pushpa-2-The-Rule-Telugu-Telugu-2024-20241205211012-500x500.jpg",
+            audio: "Sooseki.mp3",
+            duration: "4:19"
+        },
+        {
+            id: 13,
+            title: "Peelings",
+            artist: "Shankarr Babu Kandukoori, Laxmi Dasa",
+            album: "Pushpa 2: The Rule",
+            cover: "https://c.saavncdn.com/366/Pushpa-2-The-Rule-Telugu-Telugu-2024-20241205211012-500x500.jpg",
+            audio: "Peelings.mp3",
+            duration: "4:11"
+        },
+        {
+            id: 14,
+            title: "Gango Renuka Thalli",
+            artist: "Mahalingam",
+            album: "Pushpa 2: The Rule",
+            cover: "https://c.saavncdn.com/366/Pushpa-2-The-Rule-Telugu-Telugu-2024-20241205211012-500x500.jpg",
+            audio: "Gango Renuka Thalli.mp3",
+            duration: "3:25"
+        },
+        {
+            id: 15,
+            title: "Dammunte paatukora",
+            artist: "Allu Arjun",
+            album: "Pushpa 2: The Rule",
+            cover: "https://c.saavncdn.com/366/Pushpa-2-The-Rule-Telugu-Telugu-2024-20241205211012-500x500.jpg",
+            audio: "Dammunte Pattukora.mp3",
+            duration: "3:30"
+        },
+        {
+            id: 16,
+            title: "Naatu Naatu",
+            artist: "Rahul Sipligunj, Kaala Bhairava",
+            album: "RRR",
+            cover: "https://upload.wikimedia.org/wikipedia/en/d/d7/RRR_Poster.jpg",
+            audio: "Nattu Nattu.mp3",
+            duration: "3:34",
+        },
+        {
+            id: 17,
+            title: "Dosti",
+            artist: "Hemachandra, MM Keeravaani",
+            album: "RRR",
+            cover: "https://upload.wikimedia.org/wikipedia/en/d/d7/RRR_Poster.jpg",
+            audio: "Dosti.mp3",
+            duration: "4:21",
+        },
+        {
+            id: 18,
+            title: "Komuram Bheemudo",
+            artist: "Kaala Bhairava",
+            album: "RRR",
+            cover: "https://upload.wikimedia.org/wikipedia/en/d/d7/RRR_Poster.jpg",
+            audio: "Komuram Bheemudo.mp3",
+            duration: "3:27",
+        },
+        {
+            id: 19,
+            title: "Ramam Raghavam",
+            artist: "Vijay Prakash, M keervaani ",
+            album: "RRR",
+            cover: "https://upload.wikimedia.org/wikipedia/en/d/d7/RRR_Poster.jpg",
+            audio: "Raamam Raaghavam.mp3",
+            duration: "3:52",
+        },
+        {
+            id: 20,
+            title: "Etthara Jenda",
+            artist: "Ramya Behara, Deepak Blue",
+            album: "RRR",
+            cover: "https://upload.wikimedia.org/wikipedia/en/d/d7/RRR_Poster.jpg",
+            audio: "Etthara Jenda.mp3",
+            duration: "3:04",
+        },
+        {
+            id: 21,
+            title: "Nenu Nuvvantu",
+            artist: "Naresh Iyer, Nadeesh",
+            album: "Orange",
+            cover: "https://c.saavncdn.com/105/Orange-Telugu-2006-20210624180302-500x500.jpg",
+            audio: "3-Nenu Nuvvantu-SenSongsMp3.Co.mp3",
+            duration: "3:23"
+        },
+        {
+            id: 22,
+            title: "Godari Gattu",
+            artist: "Ramana Gogula, Madhu Priya",
+            album: "Sankranthiki Vasthunam",
+            cover: "https://naasongs.com.co/wp-content/uploads/2025/01/Sankranthiki-Vasthunnam-Songs-Download-2025-Venkatesh-Meenakshi-Chaudhary-Aishwarya-Rajesh-1.jpg",
+            audio: "Godari Gattu.mp3",
+            duration: "3:45"
+        },
+        {
+            id: 23,
+            title: "Ramuloo Ramulaa",
+            artist: "Allu Arjun",
+            album: "Ala Vaikuntapuramlo",
+            cover: "https://i.scdn.co/image/ab67616d0000b273ec8e1f5da18069b24fb43694",
+            audio: "Ramuloo Ramula - SenSongsMp3.Co.mp3",
+            duration: "4:05"
+        },
+        {
+            id: 24,
+            title: "My is Billa",
+            artist: "Prabhas",
+            album: "Billa",
+            cover: "https://naasongs.com.co/wp-content/uploads/2018/06/Billa-2009-jpeg-300x300.jpg",
+            audio: "My Name is Billa-SenSongsMp3.Co.mp3",
+            duration: "3:20"
+        },
+        {
+            id: 25,
+            title: "Prema Velluva",
+            artist: "Sid Sriram",
+            album: "Hit 3",
+            cover: "https://a10.gaanacdn.com/gn_img/albums/XzVWRLKdqR/VWRJBBELWd/size_m.jpg",
+            audio: "Prema Velluva.mp3",
+            duration: "4:15"
+        },
+        {
+            id: 26,
+            title: "Hello Rammante",
+            artist: "Vijay Prakash",
+            album: "Orange",
+            cover: "https://c.saavncdn.com/105/Orange-Telugu-2006-20210624180302-500x500.jpg",
+            audio: "4-Hello Rammante-SenSongsMp3.Co.mp3",
+            duration: "2:54"
+        },
+        {
+            id: 27,
+            title: "Ek Niranjan",
+            artist: "Mani Sharma, Ranjith",
+            album: "Ek Niranjan",
+            cover: "https://c.saavncdn.com/702/Ek-Niranjan-2009-500x500.jpg",
+            audio: "Ek Niranjan-SenSongsMp3.Co.mp3",
+            duration: "2:21"
+        },
+        {
+            id: 28,
+            title: "Endhoko Pichi Pichiga",
+            artist: "N.C. Karunya",
+            album: "Chirutha",
+            cover: "https://naasongs.com.co/wp-content/uploads/2018/06/chirutha-jpeg-300x300.jpg",
+            audio: "Endhuko Pichi Pichi-SenSongsMp3.Co.mp3",
+            duration: "3:50"
+        },
+        {
+            id: 29,
+            title: "Butta Bomma",
+            artist: "Amran Malik",
+            album: "Ala Vaikuntapuramlo",
+            cover: "https://i.scdn.co/image/ab67616d0000b27363118748c712b6ac32c0feec",
+            audio: "Buttabomma - SenSongsMp3.Co.mp3",
+            duration: "3:03"
+        },
+        {
+            id: 30,
+            title: "Naalona Pongenu",
+            artist: "Haricharan",
+            album: "Surya S/o Krishanan",
+            cover: "https://c.saavncdn.com/182/Surya-S-o-Krishnan-Telugu-2008-20190822124405-500x500.jpg",
+            audio: "02 - Naalona Pongenu - SenSongsMp3.co.mp3",
+            duration: "3:35"
+        }
+    ];
 
-            // Audio player setup
-            const audioPlayer = new Audio();
-            let currentSong = null;
-            let isPlaying = false;
-            let isShuffle = false;
-            let isRepeat = false;
-            let currentPlaylist = [...musicLibrary];
-            let currentSongIndex = 0;
+    // Audio player setup
+    const audioPlayer = new Audio();
+    let currentSong = null;
+    let isPlaying = false;
+    let isShuffle = false;
+    let isRepeat = false;
+    let currentPlaylist = [...musicLibrary];
+    let currentSongIndex = 0;
 
-            // DOM elements
-            const songsContainer = document.getElementById('songs-container');
-            const playerAlbumCover = document.getElementById('player-album-cover');
-            const playerSongTitle = document.getElementById('player-song-title');
-            const playerSongArtist = document.getElementById('player-song-artist');
-            const playBtn = document.getElementById('play-btn');
-            const playAllBtn = document.getElementById('play-all-btn');
-            const prevBtn = document.getElementById('prev-btn');
-            const nextBtn = document.getElementById('next-btn');
-            const shuffleBtn = document.getElementById('shuffle-btn');
-            const repeatBtn = document.getElementById('repeat-btn');
-            const likeBtn = document.getElementById('like-btn');
-            const progressBar = document.getElementById('progress-bar');
-            const progress = document.getElementById('progress');
-            const currentTimeEl = document.getElementById('current-time');
-            const durationEl = document.getElementById('duration');
-            const volumeBtn = document.getElementById('volume-btn');
-            const volumeBar = document.getElementById('volume-bar');
-            const volumeLevel = document.getElementById('volume-level');
+    // DOM elements
+    const songsContainer = document.getElementById('songs-container');
+    const playerAlbumCover = document.getElementById('player-album-cover');
+    const playerSongTitle = document.getElementById('player-song-title');
+    const playerSongArtist = document.getElementById('player-song-artist');
+    const playBtn = document.getElementById('play-btn');
+    const playAllBtn = document.getElementById('play-all-btn');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    const shuffleBtn = document.getElementById('shuffle-btn');
+    const repeatBtn = document.getElementById('repeat-btn');
+    const likeBtn = document.getElementById('like-btn');
+    const progressBar = document.getElementById('progress-bar');
+    const progress = document.getElementById('progress');
+    const currentTimeEl = document.getElementById('current-time');
+    const durationEl = document.getElementById('duration');
+    const volumeBtn = document.getElementById('volume-btn');
+    const volumeBar = document.getElementById('volume-bar');
+    const volumeLevel = document.getElementById('volume-level');
 
-            // Initialize volume
-            audioPlayer.volume = 0.7;
-            volumeLevel.style.width = `${audioPlayer.volume * 100}%`;
+    // Initialize volume
+    audioPlayer.volume = 0.7;
+    volumeLevel.style.width = `${audioPlayer.volume * 100}%`;
 
-            // Render songs
-            function renderSongs() {
-                songsContainer.innerHTML = '';
-                
-                musicLibrary.forEach((song, index) => {
-                    const songElement = document.createElement('div');
-                    songElement.className = 'song';
-                    songElement.dataset.id = song.id;
-                    
-                    songElement.innerHTML = `
-                        <div class="song-number">${index + 1}</div>
-                        <div class="song-info">
-                            <img src="${song.cover}" alt="Album Cover">
-                            <div class="song-details">
-                                <h4>${song.title}</h4>
-                                <p>${song.artist}</p>
-                            </div>
-                        </div>
-                        <div class="song-album">${song.album}</div>
-                        <div class="song-duration">${song.duration}</div>
-                    `;
-                    
-                    songsContainer.appendChild(songElement);
-                });
-            }
-
-            // Play song function
-            function playSong(song) {
-                currentSong = song;
-                
-                // Update player UI
-                playerAlbumCover.src = song.cover;
-                playerSongTitle.textContent = song.title;
-                playerSongArtist.textContent = song.artist;
-                durationEl.textContent = song.duration;
-                
-                // Set audio source
-                audioPlayer.src = song.audio;
-                audioPlayer.play()
-                    .then(() => {
-                        isPlaying = true;
-                        playBtn.querySelector('i').classList.remove('fa-play');
-                        playBtn.querySelector('i').classList.add('fa-pause');
-                    })
-                    .catch(error => {
-                        console.error('Error playing song:', error);
-                    });
-            }
-
-            // Toggle play/pause
-            function togglePlayPause() {
-                if (isPlaying) {
-                    audioPlayer.pause();
-                    playBtn.querySelector('i').classList.remove('fa-pause');
-                    playBtn.querySelector('i').classList.add('fa-play');
-                } else {
-                    if (currentSong) {
-                        audioPlayer.play();
-                        playBtn.querySelector('i').classList.remove('fa-play');
-                        playBtn.querySelector('i').classList.add('fa-pause');
-                    } else {
-                        // If no song is selected, play the first song
-                        playSong(currentPlaylist[0]);
-                        currentSongIndex = 0;
-                    }
-                }
-                isPlaying = !isPlaying;
-            }
-
-            // Play next song
-            function playNext() {
-                if (currentPlaylist.length === 0) return;
-                
-                if (isShuffle) {
-                    currentSongIndex = Math.floor(Math.random() * currentPlaylist.length);
-                } else {
-                    currentSongIndex = (currentSongIndex + 1) % currentPlaylist.length;
-                }
-                
-                playSong(currentPlaylist[currentSongIndex]);
-            }
-
-            // Play previous song
-            function playPrev() {
-                if (currentPlaylist.length === 0) return;
-                
-                if (isShuffle) {
-                    currentSongIndex = Math.floor(Math.random() * currentPlaylist.length);
-                } else {
-                    currentSongIndex = (currentSongIndex - 1 + currentPlaylist.length) % currentPlaylist.length;
-                }
-                
-                playSong(currentPlaylist[currentSongIndex]);
-            }
-
-            // Update progress bar
-            function updateProgress() {
-                const { currentTime, duration } = audioPlayer;
-                const progressPercent = (currentTime / duration) * 100;
-                progress.style.width = `${progressPercent}%`;
-                
-                // Update time display
-                const currentMinutes = Math.floor(currentTime / 60);
-                const currentSeconds = Math.floor(currentTime % 60);
-                currentTimeEl.textContent = `${currentMinutes}:${currentSeconds < 10 ? '0' + currentSeconds : currentSeconds}`;
-            }
-
-            // Set progress
-            function setProgress(e) {
-                const width = this.clientWidth;
-                const clickX = e.offsetX;
-                const duration = audioPlayer.duration;
-                audioPlayer.currentTime = (clickX / width) * duration;
-            }
-
-            // Set volume
-            function setVolume(e) {
-                const width = this.clientWidth;
-                const clickX = e.offsetX;
-                const volume = clickX / width;
-                audioPlayer.volume = volume;
-                volumeLevel.style.width = `${volume * 100}%`;
-                
-                // Update volume icon
-                if (volume === 0) {
-                    volumeBtn.querySelector('i').classList.remove('fa-volume-up', 'fa-volume-down');
-                    volumeBtn.querySelector('i').classList.add('fa-volume-mute');
-                } else if (volume < 0.5) {
-                    volumeBtn.querySelector('i').classList.remove('fa-volume-up', 'fa-volume-mute');
-                    volumeBtn.querySelector('i').classList.add('fa-volume-down');
-                } else {
-                    volumeBtn.querySelector('i').classList.remove('fa-volume-down', 'fa-volume-mute');
-                    volumeBtn.querySelector('i').classList.add('fa-volume-up');
-                }
-            }
-
-            // Toggle shuffle
-            function toggleShuffle() {
-                isShuffle = !isShuffle;
-                shuffleBtn.style.color = isShuffle ? 'var(--primary-color)' : 'var(--gray-text)';
-            }
-
-            // Toggle repeat
-            function toggleRepeat() {
-                isRepeat = !isRepeat;
-                repeatBtn.style.color = isRepeat ? 'var(--primary-color)' : 'var(--gray-text)';
-                audioPlayer.loop = isRepeat;
-            }
-
-            // Toggle like
-            function toggleLike() {
-                const icon = likeBtn.querySelector('i');
-                if (icon.classList.contains('far')) {
-                    icon.classList.remove('far');
-                    icon.classList.add('fas');
-                    icon.style.color = '#1db954';
-                } else {
-                    icon.classList.remove('fas');
-                    icon.classList.add('far');
-                    icon.style.color = '';
-                }
-            }
-
-            // Event listeners
-            playBtn.addEventListener('click', togglePlayPause);
-            playAllBtn.addEventListener('click', function() {
-                if (currentPlaylist.length > 0) {
-                    playSong(currentPlaylist[0]);
-                    currentSongIndex = 0;
-                }
-            });
-            prevBtn.addEventListener('click', playPrev);
-            nextBtn.addEventListener('click', playNext);
-            shuffleBtn.addEventListener('click', toggleShuffle);
-            repeatBtn.addEventListener('click', toggleRepeat);
-            likeBtn.addEventListener('click', toggleLike);
-            progressBar.addEventListener('click', setProgress);
-            volumeBar.addEventListener('click', setVolume);
-
-            audioPlayer.addEventListener('timeupdate', updateProgress);
-            audioPlayer.addEventListener('ended', () => {
-                if (!isRepeat) {
-                    playNext();
-                }
-            });
-            audioPlayer.addEventListener('loadedmetadata', () => {
-                const durationMinutes = Math.floor(audioPlayer.duration / 60);
-                const durationSeconds = Math.floor(audioPlayer.duration % 60);
-                durationEl.textContent = `${durationMinutes}:${durationSeconds < 10 ? '0' + durationSeconds : durationSeconds}`;
-            });
-
-            // Song click events
-            songsContainer.addEventListener('click', function(e) {
-                const songElement = e.target.closest('.song');
-                if (!songElement) return;
-                
-                const songId = parseInt(songElement.dataset.id);
-                const songIndex = currentPlaylist.findIndex(song => song.id === songId);
-                
-                if (songIndex !== -1) {
-                    currentSongIndex = songIndex;
-                    playSong(currentPlaylist[songIndex]);
-                }
-            });
-
-            // Initialize the app
-            renderSongs();
+    // Render songs
+    function renderSongs() {
+        songsContainer.innerHTML = '';
+        
+        musicLibrary.forEach((song, index) => {
+            const songElement = document.createElement('div');
+            songElement.className = 'song';
+            songElement.dataset.id = song.id;
+            
+            songElement.innerHTML = `
+                <div class="song-number">${index + 1}</div>
+                <div class="song-info">
+                    <img src="${song.cover}" alt="Album Cover">
+                    <div class="song-details">
+                        <h4>${song.title}</h4>
+                        <p>${song.artist}</p>
+                    </div>
+                </div>
+                <div class="song-album">${song.album}</div>
+                <div class="song-duration">${song.duration}</div>
+            `;
+            
+            songsContainer.appendChild(songElement);
         });
-    </script>
+    }
+
+    // Play song function
+    function playSong(song) {
+        currentSong = song;
+        
+        // Update player UI
+        playerAlbumCover.src = song.cover;
+        playerSongTitle.textContent = song.title;
+        playerSongArtist.textContent = song.artist;
+        durationEl.textContent = song.duration;
+        
+        // Set audio source
+        audioPlayer.src = song.audio;
+        audioPlayer.play()
+            .then(() => {
+                isPlaying = true;
+                playBtn.querySelector('i').classList.remove('fa-play');
+                playBtn.querySelector('i').classList.add('fa-pause');
+            })
+            .catch(error => {
+                console.error('Error playing song:', error);
+            });
+    }
+
+    // Toggle play/pause
+    function togglePlayPause() {
+        if (isPlaying) {
+            audioPlayer.pause();
+            playBtn.querySelector('i').classList.remove('fa-pause');
+            playBtn.querySelector('i').classList.add('fa-play');
+        } else {
+            if (currentSong) {
+                audioPlayer.play();
+                playBtn.querySelector('i').classList.remove('fa-play');
+                playBtn.querySelector('i').classList.add('fa-pause');
+            } else {
+                // If no song is selected, play the first song
+                playSong(currentPlaylist[0]);
+                currentSongIndex = 0;
+            }
+        }
+        isPlaying = !isPlaying;
+    }
+
+    // Play next song
+    function playNext() {
+        if (currentPlaylist.length === 0) return;
+        
+        if (isShuffle) {
+            currentSongIndex = Math.floor(Math.random() * currentPlaylist.length);
+        } else {
+            currentSongIndex = (currentSongIndex + 1) % currentPlaylist.length;
+        }
+        
+        playSong(currentPlaylist[currentSongIndex]);
+    }
+
+    // Play previous song
+    function playPrev() {
+        if (currentPlaylist.length === 0) return;
+        
+        if (isShuffle) {
+            currentSongIndex = Math.floor(Math.random() * currentPlaylist.length);
+        } else {
+            currentSongIndex = (currentSongIndex - 1 + currentPlaylist.length) % currentPlaylist.length;
+        }
+        
+        playSong(currentPlaylist[currentSongIndex]);
+    }
+
+    // Update progress bar
+    function updateProgress() {
+        const { currentTime, duration } = audioPlayer;
+        const progressPercent = (currentTime / duration) * 100;
+        progress.style.width = `${progressPercent}%`;
+        
+        // Update time display
+        const currentMinutes = Math.floor(currentTime / 60);
+        const currentSeconds = Math.floor(currentTime % 60);
+        currentTimeEl.textContent = `${currentMinutes}:${currentSeconds < 10 ? '0' + currentSeconds : currentSeconds}`;
+    }
+
+    // Set progress
+    function setProgress(e) {
+        const width = this.clientWidth;
+        const clickX = e.offsetX;
+        const duration = audioPlayer.duration;
+        audioPlayer.currentTime = (clickX / width) * duration;
+    }
+
+    // Set volume
+    function setVolume(e) {
+        const width = this.clientWidth;
+        const clickX = e.offsetX;
+        const volume = clickX / width;
+        audioPlayer.volume = volume;
+        volumeLevel.style.width = `${volume * 100}%`;
+        
+        // Update volume icon
+        if (volume === 0) {
+            volumeBtn.querySelector('i').classList.remove('fa-volume-up', 'fa-volume-down');
+            volumeBtn.querySelector('i').classList.add('fa-volume-mute');
+        } else if (volume < 0.5) {
+            volumeBtn.querySelector('i').classList.remove('fa-volume-up', 'fa-volume-mute');
+            volumeBtn.querySelector('i').classList.add('fa-volume-down');
+        } else {
+            volumeBtn.querySelector('i').classList.remove('fa-volume-down', 'fa-volume-mute');
+            volumeBtn.querySelector('i').classList.add('fa-volume-up');
+        }
+    }
+
+    // Toggle shuffle
+    function toggleShuffle() {
+        isShuffle = !isShuffle;
+        shuffleBtn.style.color = isShuffle ? 'var(--primary-color)' : 'var(--gray-text)';
+    }
+
+    // Toggle repeat
+    function toggleRepeat() {
+        isRepeat = !isRepeat;
+        repeatBtn.style.color = isRepeat ? 'var(--primary-color)' : 'var(--gray-text)';
+        audioPlayer.loop = isRepeat;
+    }
+
+    // Toggle like
+    function toggleLike() {
+        const icon = likeBtn.querySelector('i');
+        if (icon.classList.contains('far')) {
+            icon.classList.remove('far');
+            icon.classList.add('fas');
+            icon.style.color = '#1db954';
+        } else {
+            icon.classList.remove('fas');
+            icon.classList.add('far');
+            icon.style.color = '';
+        }
+    }
+
+    // Event listeners
+    playBtn.addEventListener('click', togglePlayPause);
+    playAllBtn.addEventListener('click', function() {
+        if (currentPlaylist.length > 0) {
+            playSong(currentPlaylist[0]);
+            currentSongIndex = 0;
+        }
+    });
+    prevBtn.addEventListener('click', playPrev);
+    nextBtn.addEventListener('click', playNext);
+    shuffleBtn.addEventListener('click', toggleShuffle);
+    repeatBtn.addEventListener('click', toggleRepeat);
+    likeBtn.addEventListener('click', toggleLike);
+    progressBar.addEventListener('click', setProgress);
+    volumeBar.addEventListener('click', setVolume);
+
+    audioPlayer.addEventListener('timeupdate', updateProgress);
+    audioPlayer.addEventListener('ended', () => {
+        if (!isRepeat) {
+            playNext();
+        }
+    });
+    audioPlayer.addEventListener('loadedmetadata', () => {
+        const durationMinutes = Math.floor(audioPlayer.duration / 60);
+        const durationSeconds = Math.floor(audioPlayer.duration % 60);
+        durationEl.textContent = `${durationMinutes}:${durationSeconds < 10 ? '0' + durationSeconds : durationSeconds}`;
+    });
+
+    // Song click events
+    songsContainer.addEventListener('click', function(e) {
+        const songElement = e.target.closest('.song');
+        if (!songElement) return;
+        
+        const songId = parseInt(songElement.dataset.id);
+        const songIndex = currentPlaylist.findIndex(song => song.id === songId);
+        
+        if (songIndex !== -1) {
+            currentSongIndex = songIndex;
+            playSong(currentPlaylist[songIndex]);
+        }
+    });
+
+    // Initialize the app
+    renderSongs();
+});
+</script>
 </body>
 </html>
